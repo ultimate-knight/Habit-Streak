@@ -29,18 +29,6 @@ export default function Habits(){
     {id:"quantity",label:"Quantity",icon:<Utensils className="w-5 h-5 mt-0.5"/>}
    ]
 
-//    const habitAll=[
-//    {id:"exercise",label:"Exercise",amount:"Time",icon:<Dumbbell className="h-16 w-16 max-sm:h-13 max-sm:w-13 text-center"/>},
-//             {id:"medicine",label:"Take Medicine",amount:"Amount",icon:<TabletsIcon className="h-16 w-16 text-center"/>},
-//             {id:"fruits",label:"Eat fruits",amount:"Amount",icon:<AppleIcon className="h-16 w-16 text-center"/>},
-//             {id:"Books",label:"Read Books",amount:"Time",icon:<Book className="h-16 w-16 text-center"/>},
-//              {id:"drink",label:"Drink water",amount:"Amount",icon:<Droplet className="h-16 w-16 max-sm:h-13 max-sm:w-13 text-center"/>},
-//             {id:"meditation",label:"Meditation",amount:"Time",icon:<Flower className="h-16 w-16 text-center"/>},
-//             {id:"stretching",label:"Stretching",amount:"Time",icon:<PersonStanding className="h-16 w-16 text-center"/>},
-//             {id:"vegetables",label:"Eat vegetables",amount:"Amount",icon:<CarrotIcon className="h-16 w-16 text-center"/>},
-//             {id:"room",label:"Clean room",amount:"Amount",icon:<BrushCleaningIcon className="h-16 w-16 text-center"/>},
-//             {id:"laundary",label:"Do laundary",amount:"Amount",icon:<ShirtIcon className="h-16 w-16 text-center"/>}
-//    ]
 
 const habitAll = [
   {id:"exercise",label:"Exercise",amount:"Time",icon:"Dumbbell"},
@@ -54,15 +42,6 @@ const habitAll = [
   {id:"room",label:"Clean room",amount:"Amount",icon:"BrushCleaningIcon"},
   {id:"laundary",label:"Do laundary",amount:"Amount",icon:"ShirtIcon"},
 ];
-//    const habitTime=[
-//             {id:"exercise",label:"Exercise",amount:"Time",icon:<Dumbbell className="h-16 w-16 max-sm:h-13 max-sm:w-13 text-center"/>},
-//             {id:"stretching",label:"Stretching",amount:"Time",icon:<PersonStanding className="h-16 w-16 text-center"/>},
-//             {id:"Books",label:"Read Books",amount:"Time",icon:<Book className="h-16 w-16 text-center"/>},
-//             {id:"meditation",label:"Meditation",amount:"Time",icon:<Flower className="h-16 w-16 text-center"/>}
-
-
-            
-//    ]
 
 const habitTime = [
   {id:"exercise",label:"Exercise",amount:"Time",icon:"Dumbbell"},
@@ -70,16 +49,6 @@ const habitTime = [
   {id:"Books",label:"Read Books",amount:"Time",icon:"Book"},
   {id:"meditation",label:"Meditation",amount:"Time",icon:"Flower"},
 ];
-
-//    const habitAmount=[
-//             {id:"drink",label:"Drink water",amount:"Amount",icon:<Droplet className="h-16 w-16 max-sm:h-13 max-sm:w-13 text-center"/>},
-//             {id:"medicine",label:"Take Medicine",amount:"Amount",icon:<TabletsIcon className="h-16 w-16 text-center"/>},
-//             {id:"fruits",label:"Eat fruits",amount:"Amount",icon:<AppleIcon className="h-16 w-16 text-center"/>},
-//             {id:"vegetables",label:"Eat vegetables",amount:"Amount",icon:<CarrotIcon className="h-16 w-16 text-center"/>},
-//             {id:"room",label:"Clean room",amount:"Amount",icon:<BrushCleaningIcon className="h-16 w-16 text-center"/>},
-//             {id:"laundary",label:"Do laundary",amount:"Amount",icon:<ShirtIcon className="h-16 w-16 text-center"/>}
-//    ]
-
 
 const habitAmount = [
   {id:"drink",label:"Drink water",amount:"Amount",icon:"Droplet"},
@@ -117,11 +86,11 @@ const habitAmount = [
     const IconComponent = IconMap[hab.icon]
     return (
 
-<Link key={hab.id}  href={`/Add-Habit?label=${hab.label}&&amount=${hab.amount}&&icon=${hab.icon}`}><button  className="flex flex-col whitespace-nowrap bg-white/10 items-center justify-center space-y-3  rounded-full w-50 h-50  max-md:w-40 max-md:h-40 max-sm:w-37 max-sm:h-37 border-8 border-gray-500">
+<Link key={hab.id}  href={`/Add-Habit?label=${hab.label}&&amount=${hab.amount}&&icon=${hab.icon}`}><button  className="flex flex-col whitespace-nowrap bg-white/10 items-center justify-center space-y-3  rounded-full w-30 h-30  max-md:w-40 max-md:h-40 max-sm:w-37 max-sm:h-37 border-8 border-gray-500">
     {/* {hab.icon} */}
     
-<IconComponent className="h-16 w-16 max-sm:h-13 max-sm:w-13 text-center" />
-    <span className="text-center">{hab.label}</span>
+<IconComponent className="h-12 w-12 max-sm:h-13 max-sm:w-13 text-center" />
+    <span className="text-center text-[11px]">{hab.label}</span>
  </button>
  </Link>
     )
@@ -142,10 +111,10 @@ const habitAmount = [
                         const IconComponent = IconMap[baber.icon]
                         return (
                            
-                            <Link key={baber.id} href={`/Add-Habit?label=${baber.label}&&amount=${baber.amount}&&icon=${baber.icon}`}><button   className="flex flex-col bg-white/10 items-center justify-center space-y-3 rounded-full w-50 h-50 max-md:w-40 max-md:h-40 max-sm:w-37 max-sm:h-37 border-8 border-gray-500">
-                                <IconComponent className="h-16 w-16 max-sm:h-13 max-sm:w-13 text-center" />
+                            <Link key={baber.id} href={`/Add-Habit?label=${baber.label}&&amount=${baber.amount}&&icon=${baber.icon}`}><button   className="flex flex-col bg-white/10 items-center justify-center space-y-3 rounded-full w-30 h-30 max-md:w-40 max-md:h-40 max-sm:w-37 max-sm:h-37 border-8 border-gray-500">
+                                <IconComponent className="h-12 w-12 max-sm:h-12 max-sm:w-12 text-center" />
                     {/* {baber.icon} */}
-                    <span className="text-center">{baber.label}</span>
+                    <span className="text-center text-[11px]">{baber.label}</span>
                 </button>
                 </Link>
                         )
@@ -164,11 +133,11 @@ const habitAmount = [
                     habitAmount.map((herbert)=>{
                         const IconComponent = IconMap[herbert.icon]
                         return (
-                                // <button onClick={()=>{selectedhabit(herbert);setclick(!click)}} key={herbert.id} className="flex flex-col  bg-white/10  items-center justify-center space-y-3 rounded-full w-50 h-50 max-md:w-40 max-md:h-40 max-sm:w-37 max-sm:h-37 border-8 border-gray-500">
-                                <Link  key={herbert.id} href={`/Add-Habit?label=${herbert.label}&&amount=${herbert.amount}&&icon=${herbert.icon}`}><button className="flex flex-col  bg-white/10  items-center justify-center space-y-3 rounded-full w-50 h-50 max-md:w-40 max-md:h-40 max-sm:w-37 max-sm:h-37 border-8 border-gray-500">
-                                    <IconComponent className="h-16 w-16 max-sm:h-13 max-sm:w-13 text-center" />
-                    {/* {herbert.icon} */}
-                    <span className="text-center">{herbert.label}</span>
+                               
+                                <Link  key={herbert.id} href={`/Add-Habit?label=${herbert.label}&&amount=${herbert.amount}&&icon=${herbert.icon}`}><button className="flex flex-col  bg-white/10  items-center justify-center space-y-3 rounded-full w-30 h-30 max-md:w-30 max-md:h-30 max-sm:w-37 max-sm:h-37 border-8 border-gray-500">
+                                    <IconComponent className="h-12 w-12 max-sm:h-12 max-sm:w-12 text-center" />
+                    
+                    <span className="text-center text-[11px]">{herbert.label}</span>
                 </button>
                 </Link>
                         )
