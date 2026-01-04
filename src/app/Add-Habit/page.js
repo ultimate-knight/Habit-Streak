@@ -1,10 +1,11 @@
 "use client";
 export const dynamic = 'force-dynamic'
+import { Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useState } from "react";
 
 
-export default function AddHabit(){
+function AddHabitForm(){
     const params=useSearchParams();
     const router=useRouter();
 
@@ -73,5 +74,14 @@ export default function AddHabit(){
     </div>
         </>
 
+    )
+}
+
+
+export default function AddHabit() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <AddHabitForm />
+        </Suspense>
     )
 }
